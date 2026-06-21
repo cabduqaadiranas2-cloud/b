@@ -1,0 +1,101 @@
+/* ===== Basic Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #2e2e2e;
+}
+
+/* ===== Header ===== */
+.site-header {
+  text-align: center;
+  background-color: #d35400;
+  color: white;
+  padding: 40px 20px;
+}
+
+.site-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.site-header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===== Flexbox Gallery Container ===== */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;        /* lets cards wrap to new line on smaller screens */
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* ===== Each Image Card ===== */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1 1 220px;         /* flexible: grow, shrink, base width 220px */
+  max-width: 250px;
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;       /* keeps images neat regardless of original size */
+}
+
+.card h1 {
+  font-size: 1.3rem;
+  color: #d35400;
+  margin: 12px 0 6px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  padding: 0 15px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2e2e2e;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;        /* 2 cards per row */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;       /* 1 card per row, full width */
+    max-width: 100%;
+  }
+}
